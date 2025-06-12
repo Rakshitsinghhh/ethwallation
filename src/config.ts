@@ -5,7 +5,7 @@ import { coinbaseWallet, metaMask, walletConnect , injected} from 'wagmi/connect
 
 
 export const config = createConfig({
-  chains: [sepolia],
+  chains: [mainnet],
   connectors: [
     walletConnect({
       projectId: import.meta.env.VITE_WC_PROJECT_ID,
@@ -15,7 +15,7 @@ export const config = createConfig({
     metaMask(),
   ],
   transports: {
-    [sepolia.id]: http()
+    [mainnet.id]: http()
   },
 })
 
